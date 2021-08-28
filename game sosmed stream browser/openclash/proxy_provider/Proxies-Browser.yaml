@@ -1,0 +1,9 @@
+proxies:
+- name: "Nama"
+  type: trojan
+  server: host
+  port: 443
+  password: sandi
+  udp: true
+  sni: bug.com
+  skip-cert-verify: true

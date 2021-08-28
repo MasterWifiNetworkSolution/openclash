@@ -1,0 +1,29 @@
+payload:
+
+  #YOUTUBE
+  - DOMAIN-KEYWORD,youtube
+  - DOMAIN-KEYWORD,youtubego
+  - DOMAIN-SUFFIX,youtubei.googleapis.com
+  - DOMAIN-SUFFIX,i9.ytimg.com
+  - DOMAIN-SUFFIX,i.ytimg.com
+  - DOMAIN-SUFFIX,r4---sn-npoeenl7.googlevideo.com
+  - DOMAIN-SUFFIX,r4---sn-npoeeney.googlevideo.com
+  - DOMAIN-SUFFIX,r4---sn-npoe7ns7.googlevideo.com
+  - DOMAIN-SUFFIX,clients4.google.com
+  - DOMAIN-SUFFIX,clientservices.googleapis.com
+  - DOMAIN-SUFFIX,lh3.googleusercontent.com
+  - DOMAIN-SUFFIX,content-autofill.googleapis.com
+  - DOMAIN-SUFFIX,redirector.googlevideo.com
+  - DOMAIN-SUFFIX,yt3.ggpht.com
+  - DOMAIN-SUFFIX,r1---sn-npoeenlk.googlevideo.com
+  - DOMAIN-SUFFIX,r3---sn-npoe7n7y.googlevideo.com
+  - IP-CIDR,209.85.246.0/16,Match
+  - IP-CIDR,74.125.252.0/16,Match
+  - IP-CIDR,216.239.49.0/16,Match
+  - IP-CIDR,108.170.240.0/16,Match
+  - IP-CIDR,72.14.209.0/16,Match
+  - IP-CIDR,180.240.205.0/16,Match
+  - IP-CIDR,180.240.190.0/16,Match
+  - IP-CIDR,125.160.15.0/16,Match
+
+
