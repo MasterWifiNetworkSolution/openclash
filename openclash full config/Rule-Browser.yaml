@@ -1287,3 +1287,55 @@ payload:
   - DOMAIN-SUFFIX,mediafire.com
   - DOMAIN-SUFFIX,4shared.com
   - DOMAIN-SUFFIX,internetdownloadmanager.com
+
+
+  # SHOPEE
+  - IP-CIDR,103.115.77.0/24,no-resolve
+  - IP-CIDR,143.92.81.0/26,no-resolve
+  - IP-CIDR,103.136.220.0/24,no-resolve
+  - IP-CIDR,74.125.200.0/24,no-resolve
+  - IP-CIDR,157.240.217.0/26,no-resolve
+  - IP-CIDR,172.217.31./16,no-resolve
+  - IP-CIDR,96.16.248.0/24,no-resolve
+  - IP-CIDR,103.115.78.0/24,no-resolve
+  - IP-CIDR,36.66.223.0/24,no-resolve
+  - IP-CIDR,23.72.250.0/24,no-resolve
+  - IP-CIDR,96.16.248./24,no-resolve
+  - IP-CIDR,23.72.250.0/24,no-resolve
+  - IP-CIDR,23.248.174.0/24,no-resolve
+  - IP-CIDR,23.72.249.0/24,no-resolve
+  - IP-CIDR,96.16.248.0/24,no-resolve
+  - IP-CIDR,23.72.250.0/24,no-resolve
+  - IP-CIDR,23.72.249.0/24,no-resolve
+  - IP-CIDR,96.16.248.0/24,no-resolve
+  - IP-CIDR,216.58.221.0/21,no-resolve
+  - IP-CIDR,36.66.223.0/24,no-resolve
+  - IP-CIDR,103.115.78.0/24,no-resolve
+  - IP-CIDR,96.16.248.0/24,no-resolve
+  - IP-CIDR,103.115.78.0/24,no-resolve
+  - IP-CIDR,101.33.27.0/24,no-resolve
+  - IP-CIDR,23.72.250.0/24,no-resolve
+  - IP-CIDR,96.16.248.0/24,no-resolve
+  - IP-CIDR,96.16.248.0/24,no-resolve
+  - IP-CIDR,199.232.46.0/16,no-resolve
+  - IP-CIDR,36.66.223.0/24,no-resolve
+  - IP-CIDR,103.115.77.0/24,no-resolve
+  - IP-CIDR,96.16.122.0/24,no-resolve
+  - IP-CIDR,36.66.223.0/24,no-resolve
+  - IP-CIDR,103.115.78.0/24,no-resolve
+  - IP-CIDR,172.217.194.0/16,no-resolve
+  - IP-CIDR,23.72.250.0/24,no-resolve
+  - IP-CIDR,36.66.223.0/24,no-resolve
+  - IP-CIDR,96.16.122.0/24,no-resolve
+  - IP-CIDR,172.217.194.0/16,no-resolve
+  - IP-CIDR,36.66.223.0/24,no-resolve
+  - IP-CIDR,103.115.77.0/24,no-resolve
+  - IP-CIDR,103.115.78.0/24,no-resolve
+  - IP-CIDR,65.9.17.0/24,no-resolve
+  - IP-CIDR,23.72.250.0/24,no-resolve
+  - IP-CIDR,216.58.221.0/21,no-resolve
+  - IP-CIDR,172.217.194.0/16,no-resolve
+  - IP-CIDR,124.158.128.0/24,no-resolve
+  - IP-CIDR,103.115.78.0/24,no-resolve
+  - IP-CIDR,103.115.77.0/24,no-resolve
+  - IP-CIDR,103.115.78.0/24,no-resolve
