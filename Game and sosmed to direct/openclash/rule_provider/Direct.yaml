@@ -31,10 +31,8 @@ payload:
   - DOMAIN-SUFFIX,seagroup.com
   
   # PUBG
-  - DOMAIN-KEYWORD,pubg
   - DOMAIN-SUFFIX,pubgmobile.com  
   - DOMAIN-SUFFIX,igamecj.com
-  - DOMAIN-SUFFIX,pubgmobile.net
   - DOMAIN,file-igamecj.akamaized.net
   - IP-CIDR,45.40.220.0/22
   - IP-CIDR,150.109.124.0/23
@@ -395,7 +393,6 @@ payload:
 
   
   # MobileLegends
-  - DOMAIN-KEYWORD,mobilelegends
   - DOMAIN-SUFFIX,mobilelegends.com
   - DOMAIN-SUFFIX,mobilelegends.ca
   - DOMAIN-SUFFIX,mobilelegends.cn
@@ -405,47 +402,3 @@ payload:
   - DOMAIN-SUFFIX,mobilelegends.net
   - DOMAIN-SUFFIX,mobilelegends.org
   - DOMAIN-SUFFIX,mobilelegends.com.cn
-  - DOMAIN-SUFFIX,mobile-legends.net
-  - DOMAIN-SUFFIX,garena.com
-  - DOMAIN-SUFFIX,garena.co.id
-  - DOMAIN-SUFFIX,garena.sg
-
-  # IP-CIDR Mobile Legends
-  - IP-CIDR,119.81.64.0/18
-  - IP-CIDR,119.81.224.0/19
-  - IP-CIDR,119.81.192.0/19
-  - IP-CIDR,119.81.128.0/18
-  - IP-CIDR,119.81.0.0/18
-  - IP-CIDR,128.1.87.0/24
-  - IP-CIDR,119.28.96.0/19
-  - IP-CIDR,164.52.0.0/17
-  - IP-CIDR,8.37.239.0/24
-  - IP-CIDR,14.116.128.0/19
-  - IP-CIDR,103.211.230.0/24
-  - IP-CIDR,156.236.0.0/16
-  - IP-CIDR,49.51.144.0/20
-  - IP-CIDR,182.239.114.0/24
-  - IP-CIDR,164.52.120.0/21
-  - IP-CIDR,45.43.32.0/22
-  - IP-CIDR,52.200.0.0/13
-  - IP-CIDR,49.51.32.0/20
-  - IP-CIDR,54.183.128.0/17
-  - IP-CIDR,49.51.128.0/20
-  - IP-CIDR,103.247.206.0/24
-  - IP-CIDR,103.247.204.0/22
-  - IP-CIDR,143.92.125.0/24
-  - IP-CIDR,143.92.126.0/24
-  - IP-CIDR,143.92.127.0/24
-  - IP-CIDR,157.255.0.0/16
-  - IP-CIDR,113.96.0.0/12
-  - IP-CIDR,202.181.136.0/24
-  - IP-CIDR,124.156.0.0/16
-  - IP-CIDR,162.62.0.0/16
-  - IP-CIDR,49.51.64.0/21
-  - IP-CIDR,128.1.0.0/16
-  - IP-CIDR,209.177.80.0/20
-  - IP-CIDR,203.205.136.0/23
-  - IP-CIDR,203.205.238.0/23
-  - IP-CIDR,119.28.164.0/23
-  - IP-CIDR,203.205.234.0/23
-  - IP-CIDR,119.28.206.0/23
