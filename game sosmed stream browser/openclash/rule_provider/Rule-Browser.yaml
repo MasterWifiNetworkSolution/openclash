@@ -2,7 +2,7 @@ payload:
  
   # file by Master Wifi Network Solution
   # Please Subscribe
-
+ 
   # Apple News and Apple Map TOMTOM Version
   # USER-AGENT,AppleNews*
   # USER-AGENT,com.apple.news*
@@ -14,12 +14,44 @@ payload:
   # DOMAIN,news-edge.apple.com
   # DOMAIN,news-events.apple.com
   # DOMAIN-SUFFIX,apple.news
-  - DOMAIN-SUFFIX,yahoo.co.jp
 
-  # ssh account
-  - DOMAIN-KEYWORD,globalssh
-  - DOMAIN-KEYWORD,howdy
-  - DOMAIN-KEYWORD,fastssh
+  # DAZN
+  - PROCESS-NAME,com.dazn
+  - DOMAIN,d151l6v8er5bdm.cloudfront.net
+  - DOMAIN,edge.api.brightcove.com
+  - DOMAIN,players.brightcove.net
+  - DOMAIN-KEYWORD,livedazn
+  - DOMAIN-KEYWORD,voddazn
+  - DOMAIN-KEYWORD,vod2dazn
+  - DOMAIN-SUFFIX,amplify.outbrain.com
+  - DOMAIN-SUFFIX,bluekai.com
+  - DOMAIN-SUFFIX,control.kochava.com
+  - DOMAIN-SUFFIX,cws.conviva.com
+  - DOMAIN-SUFFIX,d151l6v8er5bdm.cloudfront.net
+  - DOMAIN-SUFFIX,dazn.com
+  - DOMAIN-SUFFIX,dazn-api.com
+  - DOMAIN-SUFFIX,dazndn.com
+  - DOMAIN-SUFFIX,dc1live21715dazn.akamaized.net
+  - DOMAIN-SUFFIX,dc1-voddash-perform.secure.footprint.net
+  - DOMAIN-SUFFIX,dc2-live2dash-perform.secure.footprint.net
+  - DOMAIN-SUFFIX,dc2-live2hls-perform.secure.footprint.net
+  - DOMAIN-SUFFIX,dc2-vodhls-perform.secure.footprint.net
+  - DOMAIN-SUFFIX,dca-livedash-perform.secure.footprint.net
+  - DOMAIN-SUFFIX,dca-voddash-perform.secure.footprint.net
+  - DOMAIN-SUFFIX,dca-vodhls-perform.secure.footprint.net
+  - DOMAIN-SUFFIX,dcb-livedash-perform.secure.footprint.net
+  - DOMAIN-SUFFIX,dcb-voddash-perform.secure.footprint.net
+  - DOMAIN-SUFFIX,indazn.com
+  - DOMAIN-SUFFIX,intercom.io
+  - DOMAIN-SUFFIX,perfops.doracdn.com
+  - DOMAIN-SUFFIX,s.llnwi.net
+  - DOMAIN-SUFFIX,s.yimg.jp
+  - DOMAIN-SUFFIX,secure.footprint.net
+  - DOMAIN-SUFFIX,sentry.io
+  - DOMAIN-SUFFIX,urbanairship.com
+  - DOMAIN-SUFFIX,vjs.zencdn.net
+  - DOMAIN-SUFFIX,widevine.entitlement.us.theplatform.com
+  - DOMAIN-SUFFIX,yahoo.co.jp
   
   # Beplay
   - DOMAIN-KEYWORD,beplay
@@ -345,7 +377,16 @@ payload:
   # PBS
   # USER-AGENT,PBS*
   - DOMAIN-SUFFIX,pbs.org
-
+   
+  # Line
+  - DOMAIN-SUFFIX,lin.ee
+  - DOMAIN-SUFFIX,line.me
+  - DOMAIN-SUFFIX,line.naver.jp
+  - DOMAIN-SUFFIX,line-apps.com
+  - DOMAIN-SUFFIX,line-cdn.net
+  - DOMAIN-SUFFIX,line-scdn.net
+  - DOMAIN-SUFFIX,nhncorp.jp
+  
   # Riot Games
   - DOMAIN-SUFFIX,riotcdn.net
   - DOMAIN-SUFFIX,wr.pvp.net
@@ -944,7 +985,9 @@ payload:
   - DOMAIN-SUFFIX,yorkbbs.ca
   - DOMAIN-SUFFIX,youmaker.com
   - DOMAIN-SUFFIX,yourlisten.com
+  - DOMAIN-SUFFIX,youtu.be
   - DOMAIN-SUFFIX,yoyo.org
+  - DOMAIN-SUFFIX,ytimg.com
   - DOMAIN-SUFFIX,zacebook.com
   - DOMAIN-SUFFIX,zalmos.com
   - DOMAIN-SUFFIX,zaobao.com.sg
@@ -999,7 +1042,7 @@ payload:
   - DOMAIN-SUFFIX,waveprotocol.org
   - DOMAIN-SUFFIX,webmproject.org
   - DOMAIN-SUFFIX,webrtc.org
-
+  
   # V2EX
   - DOMAIN-SUFFIX,v2ex.com
   
@@ -1024,7 +1067,6 @@ payload:
   - IP-CIDR,54.93.0.0/16,no-resolve
   
   # Google
-
   - IP-CIDR,173.194.0.0/16,no-resolve
   - IP-CIDR,74.125.0.0/16,no-resolve
   
@@ -1146,9 +1188,6 @@ payload:
   - DOMAIN-KEYWORD,mtalk.google.com
   - DOMAIN,safebrowsing.googleapis.com
   - DOMAIN-SUFFIX,dl.google.com
-  - DOMAIN-SUFFIX,android.googleapis.com
-  - DOMAIN-SUFFIX,play.googleapis.com
-  - DOMAIN-SUFFIX,connectivitycheck.gstatic.com
   
   # Microsoft
   # USER-AGENT,Microsoft%20Remote%20Desktop*
@@ -1263,30 +1302,6 @@ payload:
   - IP-CIDR,2001:b28:f23f::/48,no-resolve
   - IP-CIDR,2001:67c:4e8::/48,no-resolve
   
-  # GITHUB
-  - DOMAIN-KEYWORD,github
-  - DOMAIN-SUFFIX,api.github.com
-  - DOMAIN,github.com
-
-  - IP-CIDR,74.125.24.0/24
-  - IP-CIDR,2404:6800:4003:c00::0/32
-
-  # online shop
-  - DOMAIN-KEYWORD,shopee
-  - DOMAIN-KEYWORD,lazada
-  - DOMAIN-KEYWORD,bukalapak
-  - DOMAIN-KEYWORD,jd
-  - DOMAIN-KEYWORD,blibli
-  - DOMAIN-KEYWORD,gofood
-  - DOMAIN-KEYWORD,grabfood
-
-  # Download
-  - DOMAIN-KEYWORD,mediafire
-  - DOMAIN-KEYWORD,4shared
-  - DOMAIN-KEYWORD,idm
-  - DOMAIN-SUFFIX,mediafire.com
-  - DOMAIN-SUFFIX,4shared.com
-  - DOMAIN-SUFFIX,internetdownloadmanager.com
 
   # SHOPEE
   - IP-CIDR,103.115.77.0/24,no-resolve
@@ -1294,47 +1309,17 @@ payload:
   - IP-CIDR,103.136.220.0/24,no-resolve
   - IP-CIDR,74.125.200.0/24,no-resolve
   - IP-CIDR,157.240.217.0/26,no-resolve
-  - IP-CIDR,172.217.31./16,no-resolve
+  - IP-CIDR,172.217.31.0/16,no-resolve
   - IP-CIDR,96.16.248.0/24,no-resolve
   - IP-CIDR,103.115.78.0/24,no-resolve
   - IP-CIDR,36.66.223.0/24,no-resolve
-  - IP-CIDR,23.72.250.0/24,no-resolve
-  - IP-CIDR,96.16.248./24,no-resolve
   - IP-CIDR,23.72.250.0/24,no-resolve
   - IP-CIDR,23.248.174.0/24,no-resolve
   - IP-CIDR,23.72.249.0/24,no-resolve
-  - IP-CIDR,96.16.248.0/24,no-resolve
-  - IP-CIDR,23.72.250.0/24,no-resolve
-  - IP-CIDR,23.72.249.0/24,no-resolve
-  - IP-CIDR,96.16.248.0/24,no-resolve
   - IP-CIDR,216.58.221.0/21,no-resolve
-  - IP-CIDR,36.66.223.0/24,no-resolve
-  - IP-CIDR,103.115.78.0/24,no-resolve
-  - IP-CIDR,96.16.248.0/24,no-resolve
-  - IP-CIDR,103.115.78.0/24,no-resolve
   - IP-CIDR,101.33.27.0/24,no-resolve
-  - IP-CIDR,23.72.250.0/24,no-resolve
-  - IP-CIDR,96.16.248.0/24,no-resolve
-  - IP-CIDR,96.16.248.0/24,no-resolve
   - IP-CIDR,199.232.46.0/16,no-resolve
-  - IP-CIDR,36.66.223.0/24,no-resolve
-  - IP-CIDR,103.115.77.0/24,no-resolve
-  - IP-CIDR,96.16.122.0/24,no-resolve
-  - IP-CIDR,36.66.223.0/24,no-resolve
-  - IP-CIDR,103.115.78.0/24,no-resolve
-  - IP-CIDR,172.217.194.0/16,no-resolve
-  - IP-CIDR,23.72.250.0/24,no-resolve
-  - IP-CIDR,36.66.223.0/24,no-resolve
   - IP-CIDR,96.16.122.0/24,no-resolve
   - IP-CIDR,172.217.194.0/16,no-resolve
-  - IP-CIDR,36.66.223.0/24,no-resolve
-  - IP-CIDR,103.115.77.0/24,no-resolve
-  - IP-CIDR,103.115.78.0/24,no-resolve
   - IP-CIDR,65.9.17.0/24,no-resolve
-  - IP-CIDR,23.72.250.0/24,no-resolve
-  - IP-CIDR,216.58.221.0/21,no-resolve
-  - IP-CIDR,172.217.194.0/16,no-resolve
   - IP-CIDR,124.158.128.0/24,no-resolve
-  - IP-CIDR,103.115.78.0/24,no-resolve
-  - IP-CIDR,103.115.77.0/24,no-resolve
-  - IP-CIDR,103.115.78.0/24,no-resolve
