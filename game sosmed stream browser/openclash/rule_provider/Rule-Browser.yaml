@@ -1,8 +1,8 @@
-payload:
- 
-  # file by Master Wifi Network Solution
-  # Please Subscribe
- 
+payload:  
+
+  # please support my channel subscribe
+  # Master Wifi Network Solution
+
   # Apple News and Apple Map TOMTOM Version
   # USER-AGENT,AppleNews*
   # USER-AGENT,com.apple.news*
@@ -993,6 +993,7 @@ payload:
   - DOMAIN-SUFFIX,zaobao.com.sg
   - DOMAIN-SUFFIX,zeutch.com
   - DOMAIN-SUFFIX,zynamics.com
+  - DOMAIN-SUFFIX,conn1.oppomobile.com
   
   # Force some domains which are fucked by GFW while resolving DNS,or do not respect the system Proxy
   
@@ -1265,6 +1266,7 @@ payload:
   - DOMAIN-SUFFIX,springsunday.net
   - DOMAIN-SUFFIX,tjupt.org
   - DOMAIN-SUFFIX,totheglory.im
+  - DOMAIN-SUFFIX,brick.freetls.fastly.net
   
   - DOMAIN-KEYWORD,announce
   - DOMAIN-KEYWORD,torrent
@@ -1304,6 +1306,16 @@ payload:
   
 
   # SHOPEE
+  - DOMAIN-KEYWORD,shopee
+  - DOMAIN-SUFFIX,mall.shopee.co.id
+  - DOMAIN-SUFFIX,games.shopee.co.id
+  - DOMAIN-SUFFIX,cf.shopee.co.id
+  - DOMAIN-SUFFIX,endpoint.mms.shopee.co.id
+  - DOMAIN-SUFFIX,live.shopee.co.id
+  - DOMAIN-SUFFIX,api.shopee.co.id
+  - DOMAIN-SUFFIX,chatroom-live.shopee.co.id
+  - DOMAIN-SUFFIX,data-rep.livetech.shopee.co.id
+  - DOMAIN-SUFFIX,log-collector.shopee.co.id
   - IP-CIDR,103.115.77.0/24,no-resolve
   - IP-CIDR,143.92.81.0/26,no-resolve
   - IP-CIDR,103.136.220.0/24,no-resolve
@@ -1323,3 +1335,27 @@ payload:
   - IP-CIDR,172.217.194.0/16,no-resolve
   - IP-CIDR,65.9.17.0/24,no-resolve
   - IP-CIDR,124.158.128.0/24,no-resolve
+
+  # LAZADA
+  - DOMAIN-KEYWORD,lazada.co.id
+  - DOMAIN-KEYWORD,lazada
+  - DOMAIN-SUFFIX,www.lazada.co.id
+  - DOMAIN-SUFFIX,acs-m.lazada.co.id
+  - DOMAIN-SUFFIX,cart.lazada.co.id
+  - DOMAIN-SUFFIX,retcode-sg-lazada.arms.aliyuncs.com
+  - DOMAIN-SUFFIX,pages.lazada.co.id
+  - DOMAIN-SUFFIX,aeis.alicdn.com
+  - DOMAIN-SUFFIX,g.alicdn.com
+  - DOMAIN-SUFFIX,assets.alicdn.com
+  - DOMAIN-SUFFIX,filebroker-cdn.lazada.co.id
+  - DOMAIN-SUFFIX,member.lazada.co.id
+  - DOMAIN-SUFFIX,member.m.lazada.co.id
+  - DOMAIN-SUFFIX,as.alipayobjects.com
+  - DOMAIN-SUFFIX,umlazada.alibaba.com
+  - DOMAIN-SUFFIX,o.alicdn.com
+  - DOMAIN-SUFFIX,laz-g-cdn.alicdn.com
+  - DOMAIN-SUFFIX,img-intl-push.heytapimg.com
+  - DOMAIN-SUFFIX,laz-img.alicdn.com
+  - DOMAIN-SUFFIX,arms-retcode-sg.aliyuncs.com
+  - DOMAIN-SUFFIX,at.alicdn.com
+  - IP-CIDR,47.89.92.0/24,no-resolve
