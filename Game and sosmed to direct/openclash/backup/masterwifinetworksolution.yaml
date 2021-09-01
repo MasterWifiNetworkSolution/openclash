@@ -6,63 +6,57 @@ proxy-providers:
     health-check:
       enable: false
       url: http://www.gstatic.com/generate_204
-      interval: 300
+      interval: 5
   Sosmed:
     type: file
     path: "./proxy_provider/Proxies-Sosmed.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 300
+      interval: 50
   Stream:
     type: file
     path: "./proxy_provider/Proxies-Stream.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 300
+      interval: 5
   Browser:
     type: file
     path: "./proxy_provider/Proxies-Browser.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 300
+      interval: 5
 proxy-groups:
 - name: Game
   type: url-test
   disable-udp: false
-  proxies:
-  - DIRECT
   use:
   - Game
   url: http://www.gstatic.com/generate_204
-  interval: '300'
+  interval: '5'
 - name: Sosmed
   type: url-test
   disable-udp: false
-  proxies:
-  - DIRECT
   use:
   - Sosmed
   url: http://www.gstatic.com/generate_204
-  interval: '300'
+  interval: '50'
 - name: Stream
   type: url-test
-  strategy: consistent-hashing
   disable-udp: false
   use:
   - Stream
   url: http://www.gstatic.com/generate_204
-  interval: '300'
+  interval: '5'
 - name: Browser
   type: url-test
-  strategy: consistent-hashing
   disable-udp: false
   use:
   - Browser
   url: http://www.gstatic.com/generate_204
-  interval: '300'
+  interval: '5'
 - name: LB Proxies and Rules
   type: load-balance
   strategy: consistent-hashing
@@ -73,12 +67,12 @@ proxy-groups:
   - Stream
   - Browser
   url: http://www.gstatic.com/generate_204
-  interval: '300'
+  interval: '5'
 redir-port: 7892
 port: 7890
 socks-port: 7891
 mixed-port: 7893
-mode: rule
+mode: global
 log-level: silent
 allow-lan: true
 external-controller: 0.0.0.0:9090
@@ -88,7 +82,7 @@ external-ui: "/usr/share/openclash/dashboard"
 dns:
   enable: true
   ipv6: false
-  enhanced-mode: redir-host
+  enhanced-mode: fake-ip
   listen: 127.0.0.1:7874
   nameserver:
   - 8.8.8.8
@@ -117,13 +111,97 @@ dns:
     - 224.0.0.0/4
     - 240.0.0.0/4
     - 255.255.255.255/32
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - "*.lan"
+  - time.windows.com
+  - time.nist.gov
+  - time.apple.com
+  - time.asia.apple.com
+  - "*.ntp.org.cn"
+  - "*.openwrt.pool.ntp.org"
+  - time1.cloud.tencent.com
+  - time.ustc.edu.cn
+  - pool.ntp.org
+  - 0.id.pool.ntp.org
+  - 1.id.pool.ntp.org
+  - 2.id.pool.ntp.org
+  - 3.id.pool.ntp.org
+  - 0.asia.pool.ntp.org
+  - 1.asia.pool.ntp.org
+  - 2.asia.pool.ntp.org
+  - 3.asia.pool.ntp.org
+  - ntp.ubuntu.com
+  - ntp.aliyun.com
+  - ntp1.aliyun.com
+  - ntp2.aliyun.com
+  - ntp3.aliyun.com
+  - ntp4.aliyun.com
+  - ntp5.aliyun.com
+  - ntp6.aliyun.com
+  - ntp7.aliyun.com
+  - time1.aliyun.com
+  - time2.aliyun.com
+  - time3.aliyun.com
+  - time4.aliyun.com
+  - time5.aliyun.com
+  - time6.aliyun.com
+  - time7.aliyun.com
+  - "*.time.edu.cn"
+  - time1.apple.com
+  - time2.apple.com
+  - time3.apple.com
+  - time4.apple.com
+  - time5.apple.com
+  - time6.apple.com
+  - time7.apple.com
+  - time1.google.com
+  - time2.google.com
+  - time3.google.com
+  - time4.google.com
+  - music.163.com
+  - "*.music.163.com"
+  - "*.126.net"
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - "*.kuwo.cn"
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - joox.com
+  - y.qq.com
+  - "*.y.qq.com"
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - "*.xiami.com"
+  - "*.music.migu.cn"
+  - music.migu.cn
+  - "*.msftconnecttest.com"
+  - "*.msftncsi.com"
+  - localhost.ptlogin2.qq.com
+  - "+.srv.nintendo.net"
+  - "+.stun.playstation.net"
+  - xbox.*.microsoft.com
+  - "+.xboxlive.com"
+  - proxy.golang.org
+  - stun.*.*
+  - stun.*.*.*
+  - heartbeat.belkin.com
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  - "+.battlenet.com.cn"
 ipv6: false
 profile:
   store-selected: true
 rules:
 - RULE-SET,Browser,Browser
 - RULE-SET,Direct,DIRECT
-- RULE-SET,Sosmed,DIRECT
+- RULE-SET,Sosmed,Browser
 - RULE-SET,Game,DIRECT
 - RULE-SET,Stream,Stream
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
