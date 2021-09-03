@@ -957,6 +957,60 @@ rules:
   - DOMAIN-SUFFIX,pandora.com,Browser
   - DOMAIN-SUFFIX,sky.com,Browser
   - DOMAIN-SUFFIX,skygo.co.nz,Browser
+  # SHOPEE
+  - DOMAIN-KEYWORD,shopee,Browser
+  - DOMAIN-SUFFIX,mall.shopee.co.id,Browser
+  - DOMAIN-SUFFIX,games.shopee.co.id,Browser
+  - DOMAIN-SUFFIX,cf.shopee.co.id,Browser
+  - DOMAIN-SUFFIX,endpoint.mms.shopee.co.id,Browser
+  - DOMAIN-SUFFIX,live.shopee.co.id,Browser
+  - DOMAIN-SUFFIX,api.shopee.co.id,Browser
+  - DOMAIN-SUFFIX,chatroom-live.shopee.co.id,Browser
+  - DOMAIN-SUFFIX,data-rep.livetech.shopee.co.id,Browser
+  - DOMAIN-SUFFIX,log-collector.shopee.co.id,Browser
+  - IP-CIDR,103.115.77.0/24,Browser
+  - IP-CIDR,143.92.81.0/26,Browser
+  - IP-CIDR,103.136.220.0/24,Browser
+  - IP-CIDR,74.125.200.0/24,Browser
+  - IP-CIDR,157.240.217.0/26,Browser
+  - IP-CIDR,172.217.31.0/16,Browser
+  - IP-CIDR,96.16.248.0/24,Browser
+  - IP-CIDR,103.115.78.0/24,Browser
+  - IP-CIDR,36.66.223.0/24,Browser
+  - IP-CIDR,23.72.250.0/24,Browser
+  - IP-CIDR,23.248.174.0/24,Browser
+  - IP-CIDR,23.72.249.0/24,Browser
+  - IP-CIDR,216.58.221.0/21,Browser
+  - IP-CIDR,101.33.27.0/24,Browser
+  - IP-CIDR,199.232.46.0/16,Browser
+  - IP-CIDR,96.16.122.0/24,Browser
+  - IP-CIDR,172.217.194.0/16,Browser
+  - IP-CIDR,65.9.17.0/24,Browser
+  - IP-CIDR,124.158.128.0/24,Browser
+  # LAZADA
+  - DOMAIN-KEYWORD,lazada.co.id,Browser
+  - DOMAIN-KEYWORD,lazada,Browser
+  - DOMAIN-SUFFIX,www.lazada.co.id,Browser
+  - DOMAIN-SUFFIX,acs-m.lazada.co.id,Browser
+  - DOMAIN-SUFFIX,cart.lazada.co.id,Browser
+  - DOMAIN-SUFFIX,retcode-sg-lazada.arms.aliyuncs.com,Browser
+  - DOMAIN-SUFFIX,pages.lazada.co.id,Browser
+  - DOMAIN-SUFFIX,aeis.alicdn.com,Browser
+  - DOMAIN-SUFFIX,g.alicdn.com,Browser
+  - DOMAIN-SUFFIX,assets.alicdn.com,Browser
+  - DOMAIN-SUFFIX,filebroker-cdn.lazada.co.id,Browser
+  - DOMAIN-SUFFIX,member.lazada.co.id,Browser
+  - DOMAIN-SUFFIX,member.m.lazada.co.id,Browser
+  - DOMAIN-SUFFIX,as.alipayobjects.com,Browser
+  - DOMAIN-SUFFIX,umlazada.alibaba.com,Browser
+  - DOMAIN-SUFFIX,o.alicdn.com,Browser
+  - DOMAIN-SUFFIX,laz-g-cdn.alicdn.com,Browser
+  - DOMAIN-SUFFIX,img-intl-push.heytapimg.com,Browser
+  - DOMAIN-SUFFIX,laz-img.alicdn.com,Browser
+  - DOMAIN-SUFFIX,arms-retcode-sg.aliyuncs.com,Browser
+  - DOMAIN-SUFFIX,at.alicdn.com,Browser
+  - IP-CIDR,47.89.92.0/24,Browser
+
 
   - IP-CIDR,91.108.56.0/22,Browser
   - IP-CIDR,91.108.4.0/22,Browser
