@@ -196,6 +196,7 @@ ipv6: false
 profile:
   store-selected: true
 rules:
+# FREE FIRE
 - DOMAIN-KEYWORD,freefire,DIRECT
 - DOMAIN-SUFFIX,garena.com,DIRECT
 - DOMAIN-SUFFIX,avatargarenanow-a.akamaihd.net,DIRECT
@@ -212,6 +213,7 @@ rules:
 - DOMAIN-SUFFIX,garena.vn,DIRECT
 - DOMAIN-SUFFIX,garenanow.com,DIRECT
 - DOMAIN-SUFFIX,seagroup.com,DIRECT
+# PUBG MOBILE
 - DOMAIN-SUFFIX,pubgmobile.com,DIRECT
 - DOMAIN-SUFFIX,igamecj.com,DIRECT
 - DOMAIN,file-igamecj.akamaized.net,DIRECT
@@ -566,6 +568,7 @@ rules:
 - IP-CIDR,223.99.142.0/24,DIRECT
 - IP-CIDR,223.99.142.255/32,DIRECT
 - IP-CIDR,224.0.0.0/4,DIRECT
+# MOBILE LEGENDS
 - DOMAIN-SUFFIX,mobilelegends.com,DIRECT
 - DOMAIN-SUFFIX,mobilelegends.ca,DIRECT
 - DOMAIN-SUFFIX,mobilelegends.cn,DIRECT
@@ -589,6 +592,15 @@ rules:
 # Speed Test by Cloudflare
 - DOMAIN-SUFFIX,speed.cloudflare.com,Browser
 - DOMAIN-SUFFIX,ooklaserver.net,Browser
+# TeamViewer
+- IP-CIDR,185.188.32.0/24,Browser 
+- IP-CIDR,185.188.33.0/24,Browser
+- IP-CIDR,185.188.34.0/24,Browser
+- IP-CIDR,185.188.35.0/24,Browser
+- IP-CIDR,2a0b:b580::/48,Browser
+- IP-CIDR,2a0b:b581::/48,Browser
+- IP-CIDR,2a0b:b582::/48,Browser
+- IP-CIDR,2a0b:b583::/48,Browser
 - DOMAIN-SUFFIX,execute-api.ap-southeast-1.amazonaws.com,Stream
 - DOMAIN-SUFFIX,hbo.com,Stream
 - DOMAIN-SUFFIX,hboasia.com,Stream
