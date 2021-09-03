@@ -617,15 +617,15 @@ rules:
   - DOMAIN-KEYWORD,twitter,Sosmed
   - DOMAIN-KEYWORD,instagram,DIRECT
   - DOMAIN-KEYWORD,whatsapp,Sosmed
-  - DOMAIN KEYWORD,twitter,Sosmed
-  - DOMAIN KEYWORD,telegram,Sosmed
-  - DOMAIN KEYWORD,path,Sosmed
-  - DOMAIN KEYWORD,tiktok,Sosmed
-  - DOMAIN KEYWORD,helo,Sosmed
-  - DOMAIN KEYWORD,snackvideo,Sosmed
+  - DOMAIN-KEYWORD,twitter,Sosmed
+  - DOMAIN-KEYWORD,telegram,Sosmed
+  - DOMAIN-KEYWORD,path,Sosmed
+  - DOMAIN-KEYWORD,tiktok,Sosmed
+  - DOMAIN-KEYWORD,helo,Sosmed
+  - DOMAIN-KEYWORD,snackvideo,Sosmed
     # Reface
   - IP-CIDR,34.101.5.0/24,Browser
-  - IP-CIDR,69.16.175./24,Browser
+  - IP-CIDR,69.16.175.0/24,Browser
   - IP-CIDR,104.155.173.0/24,Browser
   - IP-CIDR,216.58.221.0/21,Browser
   - IP-CIDR,74.125.24.0/24,Browser
@@ -668,7 +668,7 @@ rules:
   - IP-CIDR,157.240.217.0/16,DIRECT
   - IP-CIDR,31.13.68.0/24,DIRECT
   - IP-CIDR,157.240.218.0/16,DIRECT
-  - IP-CIDR,172.217.194./16,DIRECT
+  - IP-CIDR,172.217.194.0/16,DIRECT
   - IP-CIDR,31.13.95.0/24,DIRECT
   - IP-CIDR,31.13.68.0/24,DIRECT
   - IP-CIDR,224.0.0.0/28,DIRECT
