@@ -1,7 +1,4 @@
 ---
-# Please SUBSRIBE my channel
-# Master Wifi Network solution
-
 proxy-providers:
   Game:
     type: file
@@ -16,7 +13,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 50
+      interval: 300
   Stream:
     type: file
     path: "./proxy_provider/Proxies-Stream.yaml"
@@ -30,7 +27,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 50
+      interval: 3000
 proxy-groups:
 - name: Game
   type: load-balance
@@ -45,7 +42,7 @@ proxy-groups:
   use:
   - Sosmed
   url: http://www.gstatic.com/generate_204
-  interval: '50'
+  interval: '300'
 - name: Stream
   type: load-balance
   strategy: consistent-hashing
@@ -61,7 +58,7 @@ proxy-groups:
   use:
   - Browser
   url: http://www.gstatic.com/generate_204
-  interval: '50'
+  interval: '300'
 - name: LB Proxies and Rules
   type: load-balance
   strategy: consistent-hashing
@@ -196,7 +193,6 @@ ipv6: false
 profile:
   store-selected: true
 rules:
-# FREE FIRE
 - DOMAIN-KEYWORD,freefire,DIRECT
 - DOMAIN-SUFFIX,garena.com,DIRECT
 - DOMAIN-SUFFIX,avatargarenanow-a.akamaihd.net,DIRECT
@@ -213,7 +209,6 @@ rules:
 - DOMAIN-SUFFIX,garena.vn,DIRECT
 - DOMAIN-SUFFIX,garenanow.com,DIRECT
 - DOMAIN-SUFFIX,seagroup.com,DIRECT
-# PUBG MOBILE
 - DOMAIN-SUFFIX,pubgmobile.com,DIRECT
 - DOMAIN-SUFFIX,igamecj.com,DIRECT
 - DOMAIN,file-igamecj.akamaized.net,DIRECT
@@ -568,7 +563,6 @@ rules:
 - IP-CIDR,223.99.142.0/24,DIRECT
 - IP-CIDR,223.99.142.255/32,DIRECT
 - IP-CIDR,224.0.0.0/4,DIRECT
-# MOBILE LEGENDS
 - DOMAIN-SUFFIX,mobilelegends.com,DIRECT
 - DOMAIN-SUFFIX,mobilelegends.ca,DIRECT
 - DOMAIN-SUFFIX,mobilelegends.cn,DIRECT
@@ -583,17 +577,16 @@ rules:
 - DOMAIN-SUFFIX,hinet.net,Game
 - DOMAIN-KEYWORD,epicgames,Game
 - DOMAIN-SUFFIX,helpshift.com,Game
-#Speedtest by Ookla
-# USER-AGENT,SpeedTest*
 - DOMAIN-KEYWORD,speedtest,Browser
 - DOMAIN-SUFFIX,ooklaserver.net,Browser
 - DOMAIN-SUFFIX,speedtest.cbn.id,Browser
 - DOMAIN-SUFFIX,openspeedtest.com,Browser
-# Speed Test by Cloudflare
 - DOMAIN-SUFFIX,speed.cloudflare.com,Browser
 - DOMAIN-SUFFIX,ooklaserver.net,Browser
-# TeamViewer
-- IP-CIDR,185.188.32.0/24,Browser 
+- DOMAIN-KEYWORD,teamviewer,Browser
+- DOMAIN-SUFFIX,teamviewer.com,Browser
+- DOMAIN-SUFFIX,IN-DEL-ANX-R010.teamviewer.com,Browser
+- IP-CIDR,185.188.32.0/24,Browser
 - IP-CIDR,185.188.33.0/24,Browser
 - IP-CIDR,185.188.34.0/24,Browser
 - IP-CIDR,185.188.35.0/24,Browser
@@ -601,6 +594,8 @@ rules:
 - IP-CIDR,2a0b:b581::/48,Browser
 - IP-CIDR,2a0b:b582::/48,Browser
 - IP-CIDR,2a0b:b583::/48,Browser
+- DOMAIN-KEYWORD,anydesk,Browser
+- DOMAIN-SUFFIX,relay-9fa8daa1.net.anydesk.com,Browser
 - DOMAIN-SUFFIX,execute-api.ap-southeast-1.amazonaws.com,Stream
 - DOMAIN-SUFFIX,hbo.com,Stream
 - DOMAIN-SUFFIX,hboasia.com,Stream
