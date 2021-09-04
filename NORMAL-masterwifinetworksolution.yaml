@@ -13,7 +13,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 300
+      interval: 150
   Stream:
     type: file
     path: "./proxy_provider/Proxies-Stream.yaml"
@@ -27,7 +27,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 3000
+      interval: 150
 proxy-groups:
 - name: Game
   type: load-balance
@@ -42,7 +42,7 @@ proxy-groups:
   use:
   - Sosmed
   url: http://www.gstatic.com/generate_204
-  interval: '300'
+  interval: '150'
 - name: Stream
   type: load-balance
   strategy: consistent-hashing
@@ -58,7 +58,7 @@ proxy-groups:
   use:
   - Browser
   url: http://www.gstatic.com/generate_204
-  interval: '300'
+  interval: '150'
 - name: LB Proxies and Rules
   type: load-balance
   strategy: consistent-hashing
@@ -69,7 +69,7 @@ proxy-groups:
   - Stream
   - Browser
   url: http://www.gstatic.com/generate_204
-  interval: '300'
+  interval: '150'
 redir-port: 7892
 port: 7890
 socks-port: 7891
@@ -87,13 +87,84 @@ dns:
   enhanced-mode: fake-ip
   listen: 127.0.0.1:7874
   nameserver:
-  - 8.8.8.8
-  - 8.8.4.4
-  fallback:
-  - https://cloudflare-dns.com/dns-query
-  - https://dns.google/dns-query
-  - https://1.1.1.1/dns-query
-  - tls://8.8.8.8:853
+  - 114.114.114.114
+  - 119.29.29.29
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - "*.lan"
+  - time.windows.com
+  - time.nist.gov
+  - time.apple.com
+  - time.asia.apple.com
+  - "*.ntp.org.cn"
+  - "*.openwrt.pool.ntp.org"
+  - time1.cloud.tencent.com
+  - time.ustc.edu.cn
+  - pool.ntp.org
+  - ntp.ubuntu.com
+  - ntp.aliyun.com
+  - ntp1.aliyun.com
+  - ntp2.aliyun.com
+  - ntp3.aliyun.com
+  - ntp4.aliyun.com
+  - ntp5.aliyun.com
+  - ntp6.aliyun.com
+  - ntp7.aliyun.com
+  - time1.aliyun.com
+  - time2.aliyun.com
+  - time3.aliyun.com
+  - time4.aliyun.com
+  - time5.aliyun.com
+  - time6.aliyun.com
+  - time7.aliyun.com
+  - "*.time.edu.cn"
+  - time1.apple.com
+  - time2.apple.com
+  - time3.apple.com
+  - time4.apple.com
+  - time5.apple.com
+  - time6.apple.com
+  - time7.apple.com
+  - time1.google.com
+  - time2.google.com
+  - time3.google.com
+  - time4.google.com
+  - music.163.com
+  - "*.music.163.com"
+  - "*.126.net"
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - "*.kuwo.cn"
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - joox.com
+  - y.qq.com
+  - "*.y.qq.com"
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - "*.xiami.com"
+  - "*.music.migu.cn"
+  - music.migu.cn
+  - "*.msftconnecttest.com"
+  - "*.msftncsi.com"
+  - localhost.ptlogin2.qq.com
+  - "+.srv.nintendo.net"
+  - "+.stun.playstation.net"
+  - xbox.*.microsoft.com
+  - "+.xboxlive.com"
+  - proxy.golang.org
+  - stun.*.*
+  - stun.*.*.*
+  - heartbeat.belkin.com
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  - "+.battlenet.com.cn"
   fallback-filter:
     geoip: false
     ipcidr:
@@ -113,6 +184,11 @@ dns:
     - 224.0.0.0/4
     - 240.0.0.0/4
     - 255.255.255.255/32
+    domain:
+    - "+.google.com"
+    - "+.facebook.com"
+    - "+.youtube.com"
+    - "+.githubusercontent.com"
 ipv6: false
 profile:
   store-selected: true
@@ -664,6 +740,16 @@ rules:
 - IP-CIDR,216.58.196.0/21,Sosmed
 - IP-CIDR,157.240.208.0/16,Sosmed
 - IP-CIDR,216.58.203.0/21,Sosmed
+- DOMAIN-KEYWORD,howdy,Browser
+- DOMAIN-SUFFIX,howdy.id,Browser
+- DOMAIN-SUFFIX,brick.freetls.fastly.net,Browser
+- DOMAIN-KEYWORD,fastssh,Browser
+- DOMAIN-SUFFIX,fastssh.com,Browser
+- DOMAIN-KEYWORD,globalssh,Browser
+- DOMAIN-SUFFIX,globalssh.net,Browser
+- DOMAIN-KEYWORD,sshstores,Browser
+- DOMAIN-SUFFIX,sshstores.com,Browser
+- DOMAIN-KEYWORD,greenssh,Browser
 - DOMAIN-KEYWORD,amazon,Browser
 - DOMAIN-KEYWORD,google,Browser
 - DOMAIN-KEYWORD,gmail,Browser
@@ -702,6 +788,8 @@ rules:
 - DOMAIN-SUFFIX,blog.com,Browser
 - DOMAIN-SUFFIX,blogcdn.com,Browser
 - DOMAIN-SUFFIX,blogger.com,Browser
+- DOMAIN-SUFFIX,suggestqueries.google.com,Browser
+- DOMAIN-SUFFIX,userlocation.googleapis.com,Browser
 - DOMAIN-SUFFIX,blogsmithmedia.com,Browser
 - DOMAIN-SUFFIX,blogspot.com,Browser
 - DOMAIN-SUFFIX,blogspot.hk,Browser
