@@ -30,21 +30,21 @@ proxy-providers:
       interval: 150
 proxy-groups:
 - name: Game
-  type: load-balance
+  type: url-test
   disable-udp: false
   use:
   - Game
   url: http://www.gstatic.com/generate_204
   interval: '50'
 - name: Sosmed
-  type: load-balance
+  type: url-test
   disable-udp: false
   use:
   - Sosmed
   url: http://www.gstatic.com/generate_204
   interval: '150'
 - name: Stream
-  type: load-balance
+  type: url-test
   strategy: consistent-hashing
   disable-udp: false
   use:
@@ -52,14 +52,14 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: '50'
 - name: Browser
-  type: load-balance
+  type: url-test
   strategy: consistent-hashing
   disable-udp: false
   use:
   - Browser
   url: http://www.gstatic.com/generate_204
   interval: '150'
-- name: LB Proxies and Rules
+- name: Game Sosmed Stream Browser
   type: load-balance
   strategy: consistent-hashing
   disable-udp: false
