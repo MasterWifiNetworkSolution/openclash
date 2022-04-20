@@ -63,7 +63,7 @@ proxy-groups:
   type: load-balance
   strategy: consistent-hashing
   disable-udp: false
-  proxies:
+  use:
   - Game
   - Sosmed
   - Stream
